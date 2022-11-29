@@ -1,10 +1,6 @@
 # string-search-and-replace
 e-tutor HW
 
-
-
-# 字串取代尋找
-### 寫四個是因為我不知道為什麼C/C++不會過，所以寫了四個版本。如果C看不懂可以去google，關鍵字："string search and replace in c"
 ## Java(AC)
 
 ```java
