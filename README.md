@@ -67,15 +67,18 @@ int main(){
 
 void replacestr(char *line, const char *search, const char *replace){
     char *sp;
-    if((sp = strstr(line, search)) == NULL)
-        return;
-
-    int search_len = strlen(search);
-    int replace_len = strlen(replace);
-    int tail_len = strlen(sp+search_len);
+    while(1){
+      if((sp = strstr(line, search)) == NULL)
+          break;
   
-    memmove(sp+replace_len, sp+search_len, tail_len+1);
-    memcpy(sp, replace, replace_len);
+      int search_len = strlen(search);
+      int replace_len = strlen(replace);
+      int tail_len = strlen(sp+search_len);
+    
+      memmove(sp+replace_len, sp+search_len, tail_len+1);
+      memcpy(sp, replace, replace_len);
+    }
+}
 }
 
 int main(){
