@@ -79,7 +79,6 @@ void replacestr(char *line, const char *search, const char *replace){
       memcpy(sp, replace, replace_len);
     }
 }
-}
 
 int main(){
     char org[130];
